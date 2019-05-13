@@ -1,0 +1,50 @@
+<app-loading *ngIf="loading"></app-loading>
+<div
+  class="container main-container animated fadeIn fast"
+  *ngIf="movie && !loading"
+>
+  <div class="row">
+    <div class="col">
+      <h1>{{ movie.title }}</h1>
+    </div>
+    <div class="col-3 text-right">
+      <button (click)="goBack()" class="btn btn-outline-danger">
+        Regresar
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <img
+        class="img-thumbnail img-fluid"
+        [src]="movie | movieImage: true"
+        [alt]="movie.original_title"
+      />
+    </div>
+    <div class="col-md-7">
+      <div>
+        <h3>Sinopsis</h3>
+        <hr />
+        <p class="text-justify">
+          {{ movie.overview ? movie.overview : "No contiene una sinopsis" }}
+        </p>
+        <h3>Frase celebre</h3>
+        <hr />
+        <p>
+          {{ movie.tagline ? movie.tagline : "No contiene una frase celebre" }}
+        </p>
+        <p>
+          Fecha de lanzamiento:
+          <span class="badge badge-primary">
+            {{ movie.release_date }}
+          </span>
+          <br />
+          Voto promedio:
+          <span class="badge badge-primary">
+            {{ movie.vote_average }}
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

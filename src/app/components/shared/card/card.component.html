@@ -1,0 +1,77 @@
+<br />
+<h1>{{ title }}</h1>
+<hr />
+<div class="row animated fadeIn fast">
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-md-12 no-padding">
+        <img
+          class="div-pic-1 cursor-pointer"
+          [src]="movies[0] | movieImage"
+          [routerLink]="['/movie', movies[0].id]"
+        />
+        <p class="pic-title">
+          {{ movies[0].title }}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 no-padding">
+        <img
+          class="div-pic-2 cursor-pointer"
+          [src]="movies[1] | movieImage"
+          [routerLink]="['/movie', movies[1].id]"
+        />
+        <p class="pic-title">
+          {{ movies[1].title }}
+        </p>
+      </div>
+      <div class="col-sm-6 no-padding">
+        <img
+          class="div-pic-2 cursor-pointer"
+          [src]="movies[2] | movieImage"
+          [routerLink]="['/movie', movies[2].id]"
+        />
+        <p class="pic-title">
+          {{ movies[2].title }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="row">
+      <div class="col-sm-6 no-padding">
+        <img
+          class="div-pic-2 cursor-pointer"
+          [src]="movies[3] | movieImage"
+          [routerLink]="['/movie', movies[3].id]"
+        />
+        <p class="pic-title">
+          {{ movies[3].title }}
+        </p>
+      </div>
+      <div class="col-sm-6 no-padding">
+        <img
+          class="div-pic-2 cursor-pointer"
+          [src]="movies[4] | movieImage"
+          [routerLink]="['/movie', movies[4].id]"
+        />
+        <p class="pic-title">
+          {{ movies[4].title }}
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 no-padding">
+        <img
+          class="div-pic-1 cursor-pointer"
+          [src]="movies[5] | movieImage"
+          [routerLink]="['/movie', movies[5].id]"
+        />
+        <p class="pic-title">
+          {{ movies[5].title }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
